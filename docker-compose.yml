@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  #database section
+  mysqldb:
+    image: mysql:8.0.36-debian
+
+#network section
+networks:
+  default:
+    name: springmvc-networks
+    driver: bridge
+
+#volumes sections
+volumes:
+  mysql_data:
+    name: mysql_data
